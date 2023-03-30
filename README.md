@@ -9,4 +9,5 @@ Please navigate to `mr` directory for detailed instructions regarding MapReduce 
 
 ## Project 2 : Raft
 
-Coming soon
+Please navigate to `raft` directory for detailed instructions regarding Raft assignment.
+(See reference: https://github.com/Sorosliu1029/6.824/tree/master/src/raft)
