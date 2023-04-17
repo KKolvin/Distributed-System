@@ -497,6 +497,7 @@ func (cfg *config) checkNoLeader() {
 // how many servers think a log entry is committed?
 func (cfg *config) nCommitted(index int) (int, logEntry) {
 	count := 0
+	// fmt.Println("cfg:", cfg.logs) // print out the committed log entries
 	var logEntry logEntry
 	for i := 0; i < len(cfg.rafts); i++ {
 		cfg.mu.Lock()
@@ -594,13 +595,13 @@ func (cfg *config) one(cmd interface{}, expectedServers int, retry bool) int {
 				time.Sleep(20 * time.Millisecond)
 			}
 			if retry == false {
-				log.Fatalf("one(%v) failed to reach agreement", cmd)
+				log.Fatalf("one(%v) failed to reach agreement o", cmd)
 			}
 		} else {
 			time.Sleep(50 * time.Millisecond)
 		}
 	}
-	log.Fatalf("one(%v) failed to reach agreement", cmd)
+	log.Fatalf("one(%v) failed to reach agreement t", cmd)
 	return -1
 }
 

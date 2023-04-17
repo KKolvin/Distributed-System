@@ -97,8 +97,6 @@ Test (2A): initial election ...
   ... Passed --   4.0  3   32    9170    0
 Test (2A): election after network failure ...
   ... Passed --   6.1  3   70   13895    0
-Test (2A): multiple elections ...
-  ... Passed --  ...
 PASS
 ok      raft    10.187s
 ```
@@ -116,6 +114,9 @@ Each "Passed" line contains five numbers; these are the time that the test took 
 ### Task
 
 Implement the leader and follower code to append new log entries, so that the `go test -run 2B -race` tests pass.
+
+To test each test individually, do `go test -run TestBasicAgree2B -count 20` for example.
+To put all outputs into a text file do `go test -run testName > fileName.txt`.
 
 ### Hints
 
