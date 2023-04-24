@@ -1,8 +1,17 @@
-go test -run TestBasicAgree2B -count 20
-go test -run TestRPCBytes2B -count 20
-go test -run TestFailAgree2B -count 20
-go test -run TestFailNoAgree2B -count 20
-go test -run TestConcurrentStarts2B -count 20
-go test -run TestRejoin2B -count 20
-go test -run TestBackup2B -count 20
-go test -run TestCount2B -count 20
+go test -run TestBasicAgree2B -count 30
+go test -run TestRPCBytes2B -count 30
+go test -run TestFailAgree2B -count 30
+go test -run TestFailNoAgree2B -count 30
+go test -run TestConcurrentStarts2B -count 30
+go test -run TestRejoin2B -count 30
+go test -run TestBackup2B -count 30
+go test -run TestCount2B -count 30
+
+go test -run TestPersist12C -count 20
+go test -run TestPersist22C -count 20
+go test -run TestPersist32C -count 20
+go test -run TestFigure82C -count 20
+go test -run TestUnreliableAgree2C -count 20
+go test -run TestFigure8Unreliable2C -count 20
+go test -run TestReliableChurn2C -count 20
+go test -run TestUnreliableChurn2C -count 20
